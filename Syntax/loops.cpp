@@ -13,7 +13,8 @@ int main()
 
     std::cout << "\n----------------\n";
     std::cout
-        << "For Loop\n\n";
+        << "For Loop" << std::endl
+        << std::endl;
 
     for (i = 1; i <= 10; i++)
     {
