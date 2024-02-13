@@ -6,6 +6,8 @@ int main()
 {
 
     string food = "Pizza";
+    cout << &food << endl;
 
-    cout << &food;
+    string &meal = food;
+    cout << meal << endl;
 }
