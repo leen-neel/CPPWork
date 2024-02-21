@@ -9,6 +9,15 @@ public:
     string color;
 };
 
+class Animal
+{
+public:
+    Animal(string test)
+    {
+        cout << "This is a " << test << endl;
+    }
+};
+
 int main()
 {
 
@@ -19,4 +28,6 @@ int main()
 
     cout << "Car Model : " << verna.model << endl;
     cout << "Car Color : " << verna.color << endl;
+
+    Animal dog("test");
 }
