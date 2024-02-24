@@ -36,7 +36,7 @@ public:
         if (top == -1)
         {
             cout << "Stack is empty" << endl;
-            return;
+            return -1;
         }
 
         int data = arr[top];
@@ -60,3 +60,17 @@ public:
         cout << endl;
     }
 };
+
+int main(int argc, char const *argv[])
+{
+
+    Stack s;
+
+    s.push(10);
+    s.push(20);
+    s.push(30);
+
+    s.display();
+
+    return 0;
+}
