@@ -44,7 +44,7 @@ public:
         return data;
     }
 
-    void display()
+    void traverse()
     {
 
         if (top == -1)
@@ -53,7 +53,7 @@ public:
             return;
         }
 
-        for (int i = 0; i <= top; i++)
+        for (int i = top; i >= 0; i--)
         {
             cout << arr[i] << " ";
         }
@@ -70,7 +70,7 @@ int main(int argc, char const *argv[])
     s.push(20);
     s.push(30);
 
-    s.display();
+    s.traverse();
 
     return 0;
 }
