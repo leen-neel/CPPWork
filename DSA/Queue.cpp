@@ -23,7 +23,7 @@ public:
 
         if (rear == MAX - 1)
         {
-            cout << "Stack is full" << endl;
+            cout << "Queue is full" << endl;
             return;
         }
 
@@ -40,7 +40,7 @@ public:
 
         if (front == -1)
         {
-            cout << "Stack is empty" << endl;
+            cout << "Queue is empty" << endl;
             return;
         }
 
@@ -52,7 +52,7 @@ public:
 
         if (front == -1)
         {
-            cout << "Stack is empty" << endl;
+            cout << "Queue is empty" << endl;
             return;
         }
 
