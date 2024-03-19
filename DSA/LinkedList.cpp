@@ -124,9 +124,11 @@ int main()
     LinkedList list;
     list.append(5);
     list.append(10);
-    list.addBegin(15);
 
-    list.addAfter(20, 0);
+    list.addBegin(15);
+    list.addAfter(20, 1);
+
+    list.remove(2);
 
     list.display();
     return 0;
