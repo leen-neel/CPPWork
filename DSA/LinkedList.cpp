@@ -18,20 +18,76 @@ public:
 
 class LinkedList
 {
+public:
     Node *head;
     Node *tail;
 
-public:
     LinkedList()
     {
-        head = new Node(-1);
-        tail = head;
+        head = nullptr; // Initialize head to nullptr
+        tail = nullptr;
     }
 
     void append(int data)
     {
-        tail->next = new Node(data);
-        tail = tail->next;
+        if (!head)
+        {
+            head = new Node(data);
+            tail = head;
+        }
+        else
+        {
+            tail->next = new Node(data);
+            tail = tail->next;
+        }
+    }
+
+    void addBegin(int data)
+    {
+        Node *new_node = new Node(data);
+        if (!head)
+        {
+            head = new_node;
+            tail = new_node;
+        }
+        else
+        {
+            new_node->next = head;
+            head = new_node;
+        }
+    }
+
+    void addAfter(int data, int index)
+    {
+        if (index < 0)
+        {
+            cout << "Invalid index." << endl;
+            return;
+        }
+
+        Node *curr = head;
+        int i = 0;
+        while (i < index && curr)
+        {
+            curr = curr->next;
+            i++;
+        }
+
+        if (!curr)
+        {
+            cout << "Index out of range." << endl;
+            return;
+        }
+
+        Node *new_node = new Node(data);
+        new_node->next = curr->next;
+        curr->next = new_node;
+
+        // Update tail if necessary
+        if (curr == tail)
+        {
+            tail = new_node;
+        }
     }
 
     void remove(int index)
@@ -45,7 +101,7 @@ public:
         }
 
         // Remove the node ahead of curr
-        if (curr)
+        if (curr && curr->next)
         {
             curr->next = curr->next->next;
         }
@@ -53,7 +109,7 @@ public:
 
     void display()
     {
-        Node *temp = head->next;
+        Node *temp = head;
         while (temp != nullptr)
         {
             cout << temp->data << " ";
@@ -65,16 +121,13 @@ public:
 
 int main()
 {
-
     LinkedList list;
+    list.append(5);
+    list.append(10);
+    list.addBegin(15);
 
-    list.append(1);
-    list.append(2);
-    list.append(3);
-
-    list.remove(2);
+    list.addAfter(20, 0);
 
     list.display();
-
     return 0;
 }
