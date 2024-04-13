@@ -1,0 +1,35 @@
+#include <iostream>
+#include <sstream>
+#include <string>
+
+using namespace std;
+
+string convertSentence(string sentence)
+{
+    stringstream ss(sentence);
+    string word;
+    string newSentence;
+
+    // Read words from the string stream
+    while (getline(ss, word, ' '))
+    {
+        // Add the word with a single space
+        newSentence += word + " ";
+    }
+
+    // Remove the trailing space (if any)
+    newSentence.pop_back();
+
+    return newSentence;
+}
+
+int main()
+{
+    string sentence = "hey there partner!";
+
+    string convertedSentence = convertSentence(sentence);
+
+    cout << "Converted sentence: " << convertedSentence << endl;
+
+    return 0;
+}
