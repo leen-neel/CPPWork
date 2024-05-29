@@ -14,18 +14,18 @@ string convertSentence(string sentence)
     while (getline(ss, word, ' '))
     {
         // Add the word with a single space
-        newSentence += word + " ";
+        cout << word << "\n";
     }
 
     // Remove the trailing space (if any)
     newSentence.pop_back();
 
-    return newSentence;
+    return "sex";
 }
 
 int main()
 {
-    string sentence = "hey there partner!";
+    string sentence = "hey  there partner!";
 
     string convertedSentence = convertSentence(sentence);
 
