@@ -78,10 +78,12 @@ int main()
 
     bubbleSort(arr, 5);
     insertionSort(arr, 5);
-    insertionSort(arr, 5);
+    selectionSort(arr, 5);
 
     for (int i = 0; i < 5; i++)
     {
         cout << arr[i] << " ";
     }
+
+    cout << endl;
 }
