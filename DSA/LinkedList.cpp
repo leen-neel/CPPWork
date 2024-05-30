@@ -42,53 +42,53 @@ public:
         }
     }
 
-    void addBegin(int data)
-    {
-        Node *new_node = new Node(data);
-        if (!head)
-        {
-            head = new_node;
-            tail = new_node;
-        }
-        else
-        {
-            new_node->next = head;
-            head = new_node;
-        }
-    }
+    // void addBegin(int data)
+    // {
+    //     Node *new_node = new Node(data);
+    //     if (!head)
+    //     {
+    //         head = new_node;
+    //         tail = new_node;
+    //     }
+    //     else
+    //     {
+    //         new_node->next = head;
+    //         head = new_node;
+    //     }
+    // }
 
-    void addAfter(int data, int index)
-    {
-        if (index < 0)
-        {
-            cout << "Invalid index." << endl;
-            return;
-        }
+    // void addAfter(int data, int index)
+    // {
+    //     if (index < 0)
+    //     {
+    //         cout << "Invalid index." << endl;
+    //         return;
+    //     }
 
-        Node *curr = head;
-        int i = 0;
-        while (i < index && curr)
-        {
-            curr = curr->next;
-            i++;
-        }
+    //     Node *curr = head;
+    //     int i = 0;
+    //     while (i < index && curr)
+    //     {
+    //         curr = curr->next;
+    //         i++;
+    //     }
 
-        if (!curr)
-        {
-            cout << "Index out of range." << endl;
-            return;
-        }
+    //     if (!curr)
+    //     {
+    //         cout << "Index out of range." << endl;
+    //         return;
+    //     }
 
-        Node *new_node = new Node(data);
-        new_node->next = curr->next;
-        curr->next = new_node;
+    //     Node *new_node = new Node(data);
+    //     new_node->next = curr->next;
+    //     curr->next = new_node;
 
-        // Update tail if necessary
-        if (curr == tail)
-        {
-            tail = new_node;
-        }
-    }
+    //     // Update tail if necessary
+    //     if (curr == tail)
+    //     {
+    //         tail = new_node;
+    //     }
+    // }
 
     void remove(int index)
     {
@@ -131,3 +131,6 @@ int main()
     list.display();
     return 0;
 }
+
+// Output:
+// 5 10
