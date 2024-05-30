@@ -87,3 +87,6 @@ int main()
 
     cout << endl;
 }
+
+// Output:
+// 1 2 3 4 5
