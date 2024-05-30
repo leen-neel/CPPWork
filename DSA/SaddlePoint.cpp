@@ -58,3 +58,6 @@ int main()
 
     return 0;
 }
+
+// Output:
+// Saddle point found at row 3, column 2 with value 6

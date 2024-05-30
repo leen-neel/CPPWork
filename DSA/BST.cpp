@@ -142,3 +142,8 @@ int main()
 
     return 0;
 }
+
+// Output:
+// Inorder traversal: 10 20 30
+// Preorder traversal: 10 20 30
+// Postorder traversal: 30 20 10
