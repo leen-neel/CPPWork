@@ -1,26 +1,32 @@
 #include <iostream>
-#include <sstream>
 #include <string>
 
 using namespace std;
 
-string convertSentence(string sentence)
+std::string convertSentence(string sentence)
 {
-    stringstream ss(sentence);
-    string word;
-    string newSentence;
+    std::string newSentence = "";
+    bool isLastSpace = false;
 
-    // Read words from the string stream
-    while (getline(ss, word, ' '))
+    for (char &c : sentence)
     {
-        // Add the word with a single space
-        cout << word << "\n";
+
+        if (c == ' ')
+        {
+            if (!isLastSpace)
+            {
+                newSentence += c;
+                isLastSpace = true;
+            }
+        }
+        else
+        {
+            newSentence += c;
+            isLastSpace = false;
+        }
     }
 
-    // Remove the trailing space (if any)
-    newSentence.pop_back();
-
-    return "sex";
+    return newSentence;
 }
 
 int main()
