@@ -816,6 +816,38 @@ Repition of [Question 39](#question-39)
 
 [Saddle Point](https://github.com/leen-neel/CPPWork/blob/master/DSA/SaddlePoint.cpp)
 
+# Question 51:
+
+### Algorithm to Convert an Amount in Figures to Words
+
+#### Step 1: Define Arrays for Words
+
+- Create arrays for single-digit numbers, double-digit numbers from 10 to 19, and multiples of ten from 20 to 90.
+
+#### Step 2: Handle Special Case for Zero
+
+- If the input number is zero, return "Zero".
+
+#### Step 3: Extract Hundreds Place
+
+- If the number is 100 or greater, extract the hundreds place.
+- Convert the hundreds place to words using the single-digit numbers array.
+- Append "Hundred" to the result.
+- Reduce the number by the hundreds place value (use modulo operation).
+
+#### Step 4: Extract Tens and Ones Places
+
+- If the number is between 10 and 19, directly use the double-digit numbers array.
+- Otherwise, handle the tens place and the ones place separately:
+  - Extract the tens place.
+  - Convert the tens place to words using the tens multiples array.
+  - Extract the ones place.
+  - Convert the ones place to words using the single-digit numbers array.
+
+#### Step 5: Combine the Words
+
+- Concatenate the words from the hundreds, tens, and ones places to form the final result.
+
 # Question 52:
 
 | **Symbol** | **Stack** | **Postfix Expression** |
