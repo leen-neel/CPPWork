@@ -52,9 +52,7 @@ void selectionSort(int arr[], int n)
         // swap the minimum element with the first element
         if (minIndex != i)
         {
-            arr[minIndex] = arr[minIndex] + arr[i];
-            arr[i] = arr[minIndex] - arr[i];
-            arr[minIndex] = arr[minIndex] - arr[i];
+            swap(arr[minIndex], arr[i]);
         }
     }
 }

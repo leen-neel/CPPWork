@@ -59,6 +59,16 @@ public:
         }
     }
 
+    void removeBeginning()
+    {
+        if (head)
+        {
+            Node *temp = head;
+            head = head->next;
+            delete temp;
+        }
+    }
+
     void display()
     {
         Node *temp = head;
