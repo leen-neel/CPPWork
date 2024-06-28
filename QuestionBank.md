@@ -886,7 +886,7 @@ To create an AVL tree from the given sequence of data: 17, 28, 9, 14, 37, 55, 88
 
 This AVL tree maintains the balance property where the height difference between the left and right subtrees (balance factor) is at most ±1 for each node. Rotation operations were performed as needed during the insertion process to ensure this balance.
 
-# Questio 59:
+# Question 59:
 
 1. **Balanced Height**:
 
