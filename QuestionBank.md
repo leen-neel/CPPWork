@@ -818,35 +818,36 @@ Repition of [Question 39](#question-39)
 
 # Question 51:
 
-### Algorithm to Convert an Amount in Figures to Words
-
 #### Step 1: Define Arrays for Words
 
-- Create arrays for single-digit numbers, double-digit numbers from 10 to 19, and multiples of ten from 20 to 90.
+- Arrays `ones`, `teens`, and `tens` are defined to store words for single-digit numbers, double-digit numbers from 10 to 19, and multiples of ten from 20 to 90, respectively.
 
 #### Step 2: Handle Special Case for Zero
 
 - If the input number is zero, return "Zero".
 
-#### Step 3: Extract Hundreds Place
+#### Step 3: Handle Large Numbers
 
-- If the number is 100 or greater, extract the hundreds place.
-- Convert the hundreds place to words using the single-digit numbers array.
-- Append "Hundred" to the result.
-- Reduce the number by the hundreds place value (use modulo operation).
+- **Billions**: If the number is 1 billion or more, recursively call `convertToWords` for the billions place, append " Billion " to the result, and reduce the number by the billions place value.
+- **Millions**: If the number is 1 million or more, recursively call `convertToWords` for the millions place, append " Million " to the result, and reduce the number by the millions place value.
+- **Thousands**: If the number is 1 thousand or more, recursively call `convertToWords` for the thousands place, append " Thousand " to the result, and reduce the number by the thousands place value.
 
-#### Step 4: Extract Tens and Ones Places
+#### Step 4: Process Hundreds Place
 
-- If the number is between 10 and 19, directly use the double-digit numbers array.
-- Otherwise, handle the tens place and the ones place separately:
-  - Extract the tens place.
-  - Convert the tens place to words using the tens multiples array.
-  - Extract the ones place.
-  - Convert the ones place to words using the single-digit numbers array.
+- If the number is 100 or more, use the units array to convert the hundreds place, append " Hundred " to the result, and reduce the number by the hundreds place value.
 
-#### Step 5: Combine the Words
+#### Step 5: Process Tens and Ones Places
 
-- Concatenate the words from the hundreds, tens, and ones places to form the final result.
+- If the number is between 10 and 19, use the teens array.
+- Otherwise, handle the tens place and the ones place separately using the tens and units arrays.
+
+#### Step 6: Main Function
+
+- Read the input amount from the user.
+- Call the `convertToWords` function with the input amount.
+- Print the result.
+
+This updated code handles numbers up to billions and converts them to words accordingly.
 
 # Question 52:
 
@@ -920,8 +921,6 @@ Repition of [Question 39](#question-39)
 [Stack](https://github.com/leen-neel/CPPWork/blob/master/DSA/Stack.cpp)
 
 # Question 56:
-
-Certainly! Here are the steps to convert an infix expression to a postfix expression using the Shunting Yard algorithm, along with an example:
 
 ### Steps to Convert Infix to Postfix:
 
