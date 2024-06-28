@@ -353,6 +353,52 @@ Repetition of [Question 11](#question-11)
 
 In the context of graph theory, a loop, also known as a self-loop, refers to an edge that connects a vertex to itself. This means there is an edge from a vertex v back to the same vertex v.
 
+# Question 21:
+
+A complete graph is a type of graph where every pair of distinct vertices is connected by a unique edge. In other words, in a complete graph, there is an edge between every pair of vertices. Let's break down the characteristics and properties of a complete graph:
+
+### Characteristics of a Complete Graph:
+
+1. **Edges between Every Pair of Vertices**:
+
+   - In a complete graph \( G \) with \( n \) vertices, there are \( \binom{n}{2} \) edges, where \( \binom{n}{2} = \frac{n(n-1)}{2} \).
+   - Each edge connects a unique pair of vertices, ensuring that there are no isolated vertices.
+
+2. **Symmetry**:
+
+   - Every edge in a complete graph is undirected, meaning it does not have an inherent directionality.
+   - If there is an edge between vertex \( u \) and vertex \( v \), then there is also an edge between vertex \( v \) and vertex \( u \).
+
+3. **Density**:
+   - Complete graphs are dense in terms of edges compared to other types of graphs.
+   - The edge density \( D \) of a complete graph is \( 1 \), meaning every possible edge is present.
+
+### Properties of Complete Graphs:
+
+- **Number of Edges**: A complete graph with \( n \) vertices has \( \frac{n(n-1)}{2} \) edges.
+- **Degree of Vertices**: Each vertex in a complete graph has a degree of \( n-1 \), where \( n \) is the total number of vertices.
+- **Representation**: Complete graphs are often represented using adjacency matrices or adjacency lists, with adjacency matrices being fully filled (all entries are 1 except diagonal entries which are 0).
+
+### Examples:
+
+- **\( K_n \)**: The complete graph with \( n \) vertices is denoted as \( K_n \).
+- **Small Complete Graphs**:
+  - \( K_1 \) is a single vertex with no edges.
+  - \( K_2 \) is two vertices connected by a single edge.
+  - \( K_3 \) is a triangle with three vertices and three edges connecting all pairs of vertices.
+
+### Applications:
+
+- **Network Design**: Complete graphs are used as theoretical models for studying network connectivity and algorithms.
+- **Testing Algorithms**: They serve as benchmarks for testing graph algorithms due to their simplicity and clear structural properties.
+- **Communication Networks**: In some communication network designs, complete graphs may represent direct communication channels between all possible pairs of nodes.
+
+In summary, a complete graph \( K_n \) is a graph where every pair of distinct vertices is connected by a unique edge, making it a straightforward and dense structure for theoretical and practical applications in graph theory and network science.
+
+# Question 22:
+
+Repetition of [Question 1](#question-1)
+
 # Question 23:
 
 A deque, short for double-ended queue, is a linear data structure that allows elements to be added or removed from both ends with high efficiency. The deque supports operations similar to both stacks (Last-In-First-Out, LIFO) and queues (First-In-First-Out, FIFO), making it a versatile and useful structure in programming.
@@ -617,6 +663,150 @@ In a queue data structure, the front and rear pointers are used to manage and ac
    - Compare `arr[MID]` with `60`.
    - `arr[5] = 60` (found).
    - Return `MID = 5` as the index of `60` in the array.
+
+# Question 46:
+
+To create an AVL tree from the sequence of data: 16, 27, 9, 12, 36, 54, 81, 10, 44, we will insert each element into the AVL tree while ensuring the tree remains balanced by performing rotations as necessary. Here's the step-by-step process:
+
+### Step-by-Step AVL Tree Construction:
+
+1. **Insert 16**:
+
+   - Insert 16 as the root since it's the first element.
+
+   ```
+         16
+   ```
+
+2. **Insert 27**:
+
+   - Insert 27 to the right of 16.
+   - Perform rotations to balance the tree (none needed initially).
+
+   ```
+         16
+          \
+           27
+   ```
+
+3. **Insert 9**:
+
+   - Insert 9 to the left of 16.
+   - Perform rotations to balance the tree (right rotation).
+
+   ```
+         16
+        /  \
+       9    27
+   ```
+
+4. **Insert 12**:
+
+   - Insert 12 to the right of 9.
+   - Perform rotations to balance the tree (none needed initially).
+
+   ```
+         16
+        /  \
+       9    27
+        \
+        12
+   ```
+
+5. **Insert 36**:
+
+   - Insert 36 to the right of 27.
+   - Perform rotations to balance the tree (none needed initially).
+
+   ```
+         16
+        /  \
+       9    27
+        \     \
+        12    36
+   ```
+
+6. **Insert 54**:
+
+   - Insert 54 to the right of 36.
+   - Perform rotations to balance the tree (none needed initially).
+
+   ```
+         16
+        /  \
+       9    27
+        \     \
+        12    36
+               \
+               54
+   ```
+
+7. **Insert 81**:
+
+   - Insert 81 to the right of 54.
+   - Perform rotations to balance the tree (none needed initially).
+
+   ```
+         16
+        /  \
+       9    27
+        \     \
+        12    36
+               \
+                54
+                 \
+                 81
+   ```
+
+8. **Insert 10**:
+
+   - Insert 10 to the right of 9.
+   - Perform rotations to balance the tree (left-right rotation).
+
+   ```
+         16
+        /  \
+       10   27
+      /  \    \
+     9    12   36
+               \
+                54
+                 \
+                 81
+   ```
+
+9. **Insert 44**:
+
+   - Insert 44 to the left of 54.
+   - Perform rotations to balance the tree (right-left rotation).
+
+   ```
+         16
+        /  \
+       10   36
+      /  \    \
+     9    12   54
+              /  \
+             44   81
+   ```
+
+### Final AVL Tree:
+
+```
+         16
+        /  \
+       10   36
+      /  \    \
+     9    12   54
+              /  \
+             44   81
+```
+
+This AVL tree maintains balance (with balance factors of -1, 0, or 1 for each node) throughout the insertion process by performing necessary rotations (left, right, left-right, right-left) to ensure that the tree remains AVL-balanced.
+
+# Question 48:
+
+Repition of [Question 39](#question-39)
 
 # Question 49:
 
