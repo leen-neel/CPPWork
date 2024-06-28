@@ -521,7 +521,7 @@ void bubbleSort(int arr[], int n) {
 
 # Question 37:
 
-[Sorting](https://github.com/leen-neel/CPPWork/blob/master/DSA/Sorting.cpp)
+[Linear Search](https://github.com/leen-neel/CPPWork/blob/master/DSA/LinearSearch.cpp)
 
 # Question 38:
 
