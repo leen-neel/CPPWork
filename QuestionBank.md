@@ -306,3 +306,635 @@ Repetition of [Question 7](#question-7)
 # Question 17:
 
 Repetition of [Question 10](#question-10)
+
+# Question 18:
+
+A **perfect binary tree** is a type of binary tree where all interior nodes have exactly two children, and all leaf nodes (nodes with no children) are at the same level or depth.
+
+### Characteristics of a Perfect Binary Tree:
+
+1. **Node Structure**:
+
+   - Every internal node (non-leaf node) has exactly two children.
+
+2. **Depth and Level**:
+
+   - All leaf nodes are at the same level or depth.
+   - The depth of the tree is \( d \), and the number of nodes at each level \( i \) is \( 2^i \) for \( i = 0, 1, 2, \ldots, d \).
+
+3. **Number of Nodes**:
+
+   - A perfect binary tree with depth \( d \) has \( 2^{d+1} - 1 \) nodes in total, where \( d \) is the depth of the tree.
+
+4. **Structure**:
+   - Each level is completely filled before the next level is started.
+   - In other words, all nodes except possibly the last level are completely filled, and if the last level is not complete, it is filled from left to right.
+
+### Example of a Perfect Binary Tree:
+
+```
+            1
+          /   \
+        2       3
+       / \     / \
+      4   5   6   7
+```
+
+- In this example:
+  - The tree has 7 nodes ( \( 2^3 - 1 \) for depth \( d = 3 \) ).
+  - All internal nodes (1, 2, 3) have exactly two children.
+  - All leaf nodes (4, 5, 6, 7) are at the same level.
+
+# Question 19:
+
+Repetition of [Question 11](#question-11)
+
+# Quesion 20:
+
+In the context of graph theory, a loop, also known as a self-loop, refers to an edge that connects a vertex to itself. This means there is an edge from a vertex v back to the same vertex v.
+
+# Question 23:
+
+A deque, short for double-ended queue, is a linear data structure that allows elements to be added or removed from both ends with high efficiency. The deque supports operations similar to both stacks (Last-In-First-Out, LIFO) and queues (First-In-First-Out, FIFO), making it a versatile and useful structure in programming.
+
+# Question 24:
+
+The **depth** of a node in a tree is the number of edges from the root node to that particular node. It measures how far a node is from the root.
+
+The **height** of a tree is the length of the longest path from the root node to any leaf node in the tree. It measures how tall the tree is.
+
+# Question 25:
+
+In graph theory, a **simple path** is a sequence of vertices in a graph where no vertex (except possibly the first and last vertices) is repeated. This means that a simple path does not revisit any vertex, ensuring that each vertex along the path is unique.
+
+# Question 26:
+
+A connected graph is a type of graph in which there is a path (a sequence of edges) between any two vertices. In simpler terms, every vertex in a connected graph is reachable from any other vertex via edges.
+
+# Question 27:
+
+- Stack
+- Queue
+- LinkedList
+- Array
+- BinaryTtree
+- Binary Search Tree
+
+# Question 28:
+
+**Step 1:** Divide the unsorted array into n subarrays, each containing one element.
+
+**Step 2:** Repeatedly merge subarrays to produce new sorted subarrays until there is only one subarray remaining.
+
+**Step 3:** Merge the sorted subarrays to produce the final sorted array.
+
+# Question 29:
+
+Step 1: Choose a pivot element from the array (usually the last element).
+
+Step 2: Partition the array into two subarrays:
+
+- Elements less than the pivot (left partition).
+- Elements greater than the pivot (right partition).
+
+Step 3: Recursively apply quick sort to the left and right partitions.
+
+Step 4: Concatenate the sorted left partition, pivot element, and sorted right partition to obtain the sorted array.
+
+# Question 30:
+
+- **Space Utilization**: Circular queues efficiently use space by reusing empty slots, whereas linear queues may waste space once the front end reaches the array boundary.
+- **Implementation Complexity**: Circular queues require managing the circular behavior using modulo arithmetic, which can simplify certain operations compared to linear queues.
+
+- **Performance**: Circular queues generally offer better performance for enqueue and dequeue operations due to their constant time complexity, especially when implemented using arrays.
+
+# Question 31:
+
+| **Input Symbol** | **Stack** | **Output**  |
+| ---------------- | --------- | ----------- |
+| a                |           | a           |
+| +                | +         |             |
+| b                | +         | ab          |
+| \*               | +\*       | ab          |
+| c                | +\*       | abc         |
+| -                | +         | abc\*+      |
+| d                | +         | abc\*+d     |
+| /                | +/        | abc\*+d     |
+| e                | +/        | abc\*+de    |
+| +                |           | abc\*+de/-  |
+| f                |           | abc\*+de/-f |
+
+# Question 32:
+
+```cpp
+void selectionSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; ++i) {
+        // Find the minimum element in unsorted array
+        int minIndex = i;
+        for (int j = i + 1; j < n; ++j) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+
+        // Swap the found minimum element with the first element of the unsorted array
+        if (minIndex != i) {
+            std::swap(arr[i], arr[minIndex]);
+        }
+    }
+}
+```
+
+# Question 33:
+
+```cpp
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; ++i) {
+        // Last i elements are already in place
+        for (int j = 0; j < n - i - 1; ++j) {
+            // Swap if the element found is greater than the next element
+            if (arr[j] > arr[j + 1]) {
+                std::swap(arr[j], arr[j + 1]);
+            }
+        }
+    }
+}
+```
+
+# Qustion 34:
+
+[Linked List](https://github.com/leen-neel/CPPWork/blob/master/DSA/LinkedList.cpp)
+
+# Question 35:
+
+[Linked List](https://github.com/leen-neel/CPPWork/blob/master/DSA/LinkedList.cpp)
+
+# Question 36:
+
+[Sorting](https://github.com/leen-neel/CPPWork/blob/master/DSA/Sorting.cpp)
+
+# Question 37:
+
+[Sorting](https://github.com/leen-neel/CPPWork/blob/master/DSA/Sorting.cpp)
+
+# Question 38:
+
+```cpp
+int sumLowerTriangle(int matrix[][3], int n) {
+    int sum = 0;
+
+    // Iterate through each row
+    for (int i = 0; i < n; ++i) {
+        // Iterate through each column up to i (inclusive)
+        for (int j = 0; j <= i; ++j) {
+            // Add element to sum if it's in the lower triangle (including diagonal)
+            sum += matrix[i][j];
+        }
+    }
+
+    return sum;
+}
+```
+
+# Question 39:
+
+```cpp
+void deleteElement(int arr[], int size, int position) {
+    if (position < 0 || position >= size) {
+        std::cout << "Invalid position. Deletion failed.\n";
+        return;
+    }
+
+    // Shift elements to the left from position
+    for (int i = position; i < size - 1; ++i) {
+        arr[i] = arr[i + 1];
+    }
+
+}
+```
+
+# Question 40:
+
+A Binary Search Tree (BST) is a binary tree where each node has at most two child nodes, commonly referred to as the left child and the right child. The key property of a BST is that for each node:
+
+In the context of trees, the height of a node is defined as the number of edges on the longest path from the node to a leaf node.
+
+# Question 41:
+
+```
+        A
+       / \
+      B   C
+     / \   \
+    D   E   F
+   /     \   \
+  G       H   I
+           \   \
+            L   J
+                 \
+                  K
+```
+
+# Question 42:
+
+```
+        30
+       /  \
+     20    40
+    / \    / \
+  10  25  35  45
+   \          /
+   15        43
+```
+
+# Question 43:
+
+- **Ordering**: Stack follows LIFO, while queue follows FIFO.
+- **Insertion and Removal**: Stack uses push and pop operations, whereas queue uses enqueue and dequeue operations.
+- **Access**: Stacks allow access to only the top element (peek), whereas queues allow access to both the front and back elements.
+- **Usage**: Stacks are used for tasks where the last item added should be processed first, while queues are used when items need to be processed in the order they were added.
+
+# Question 44:
+
+In a queue data structure, the front and rear pointers are used to manage and access elements in the queue efficiently. Here's how they function and their roles:
+
+### Front Pointer:
+
+1. **Role**:
+
+   - The front pointer indicates the position of the first element in the queue.
+   - It tracks where the next dequeue operation will occur.
+
+2. **Operations**:
+
+   - **Enqueue**: When the queue is empty, both front and rear pointers point to the same location. After the first enqueue operation, the front pointer remains at the initial position, and the rear pointer moves to the new element.
+   - **Dequeue**: Moves the front pointer to the next element in the queue after removing the current front element. This operation effectively "moves" the queue forward.
+
+3. **Access**:
+   - Allows access to the element at the front of the queue using the front pointer.
+   - Provides efficient removal of elements from the front.
+
+### Rear Pointer:
+
+1. **Role**:
+
+   - The rear pointer indicates the position where the next enqueue operation will insert a new element.
+   - It tracks the end of the queue, facilitating efficient additions (enqueue operations).
+
+2. **Operations**:
+
+   - **Enqueue**: Moves the rear pointer to the next position after inserting a new element. If the queue is empty, both front and rear pointers start at the same location.
+   - **Dequeue**: The rear pointer remains unchanged during dequeue operations unless the last element is dequeued, in which case, adjustments may be necessary to maintain correct queue state.
+
+3. **Access**:
+   - Allows access to the element at the rear of the queue using the rear pointer.
+   - Facilitates efficient insertion of elements at the end of the queue.
+
+# Question 45:
+
+1. **Initialize Pointers**:
+
+   - `LOW` starts at index `0` (beginning of the array).
+   - `HIGH` starts at index `8` (end of the array).
+   - Calculate `MID` as `(LOW + HIGH) / 2`.
+
+2. **Iteration 1**:
+
+   - `LOW = 0`, `HIGH = 8`, `MID = (0 + 8) / 2 = 4`.
+   - Compare `arr[MID]` with `60`.
+   - `arr[4] = 50` (less than `60`).
+   - Since `50` is less than `60`, adjust `LOW` to `MID + 1`.
+
+3. **Iteration 2**:
+
+   - `LOW = 5`, `HIGH = 8`, `MID = (5 + 8) / 2 = 6`.
+   - Compare `arr[MID]` with `60`.
+   - `arr[6] = 70` (greater than `60`).
+   - Since `70` is greater than `60`, adjust `HIGH` to `MID - 1`.
+
+4. **Iteration 3**:
+   - `LOW = 5`, `HIGH = 5`, `MID = (5 + 5) / 2 = 5`.
+   - Compare `arr[MID]` with `60`.
+   - `arr[5] = 60` (found).
+   - Return `MID = 5` as the index of `60` in the array.
+
+# Question 49:
+
+[Sorting](https://github.com/leen-neel/CPPWork/blob/master/DSA/Sorting.cpp)
+
+# Question 50:
+
+[Saddle Point](https://github.com/leen-neel/CPPWork/blob/master/DSA/SaddlePoint.cpp)
+
+# Question 52:
+
+| **Symbol** | **Stack** | **Postfix Expression** |
+| ---------- | --------- | ---------------------- |
+| \( p \)    | -         | \( p \)                |
+| \( + \)    | \( + \)   | -                      |
+| \( q \)    | \( + \)   | \( pq \)               |
+| \( \* \)   | \( +\* \) | \( pq \)               |
+| \( r \)    | \( +\* \) | \( pqr \)              |
+| \( - \)    | \( + \)   | \( pq\*r \)            |
+| \( s \)    | \( + \)   | \( pq\*rs \)           |
+| \( / \)    | \( +/ \)  | \( pq\*rs \)           |
+| \( t \)    | \( +/ \)  | \( pq\*rs/t \)         |
+| \( + \)    | -         | \( pq\*rs/t+ \)        |
+| \( u \)    | \( + \)   | \( pq\*rs/t+u \)       |
+| -          | -         | \( pq\*rs/t+u+ \)      |
+
+# Question 53:
+
+[Queue](https://github.com/leen-neel/CPPWork/blob/master/DSA/Queue.cpp)
+
+# Question 54:
+
+1. **Efficient Space Utilization**:
+
+   - Circular queues reuse freed space more effectively compared to linear queues.
+   - Elements can be dequeued from the front and new elements can be enqueued at the rear, allowing for continuous use of array space without shifting elements.
+
+2. **Constant Time Complexity**:
+
+   - Enqueue and dequeue operations in circular queues typically operate in constant \( O(1) \) time complexity.
+   - This is because they involve simple arithmetic operations (incrementing or decrementing indices) rather than shifting elements in a linear queue.
+
+3. **Wrap-Around Capability**:
+
+   - Circular queues wrap around within the allocated array space using modulo arithmetic.
+   - This allows the queue to efficiently manage and reuse space by looping back to the beginning of the array when reaching the end.
+
+4. **Simplified Implementation**:
+
+   - Circular queues are often implemented using arrays with two indices (`front` and `rear`) and a fixed size.
+   - This simplifies implementation compared to dynamically resizing arrays or linked lists used in other queue implementations.
+
+5. **Applications in Buffering**:
+
+   - They are particularly useful in scenarios requiring buffering, such as task scheduling in operating systems or network packet buffering.
+   - Circular queues ensure that data is processed in a first-in, first-out (FIFO) order efficiently.
+
+6. **Optimal for Sequential Data Processing**:
+
+   - They efficiently manage sequential data processing tasks where elements need to be processed in the order they were added.
+
+7. **Avoidance of Full/Empty Queue Confusion**:
+
+   - Circular queues use a condition (typically `(rear + 1) % size == front`) to distinguish between full and empty states, avoiding confusion that can occur in linear queues.
+
+8. **Scalability and Performance**:
+
+   - Circular queues can scale well for applications requiring efficient queue management and are suitable for real-time systems where performance is critical.
+
+9. **Natural Handling of Wrap-Around**:
+
+   - The wrap-around nature of circular queues naturally handles scenarios where the queue fills up and new elements need to be added after dequeuing old ones.
+
+10. **Memory Management Efficiency**:
+    - They efficiently manage memory allocation and deallocation compared to linear queues, which may require more frequent reallocation of memory space.
+
+# Question 55:
+
+[Stack](https://github.com/leen-neel/CPPWork/blob/master/DSA/Stack.cpp)
+
+# Question 56:
+
+Certainly! Here are the steps to convert an infix expression to a postfix expression using the Shunting Yard algorithm, along with an example:
+
+### Steps to Convert Infix to Postfix:
+
+**Example Infix Expression:** \( (A + B) \* (C - D) \)
+
+1. **Initialize an empty stack and an empty output list (postfix expression)**.
+
+2. **Scan the infix expression from left to right**:
+
+   - **Operands (like A, B, C, D)**: Directly append to the output list.
+   - **Operators (+, -)**: Push onto the stack, respecting operator precedence and associativity rules.
+
+3. **Parentheses ( )**:
+
+   - **Left Parenthesis ( ( )**: Push onto the stack to mark the beginning of a sub-expression.
+   - **Right Parenthesis ( ) )**: Pop operators from the stack to the output list until a left parenthesis is encountered. Discard the left parenthesis.
+
+4. **End of Expression**: Pop all operators from the stack to the output list.
+
+### Example:
+
+**Infix Expression:** \( (A + B) \* (C - D) \)
+
+#### Step-by-Step Conversion:
+
+| **Token** | **Action**                        | **Stack**    | **Postfix Expression** |
+| --------- | --------------------------------- | ------------ | ---------------------- |
+| \( ( \)   | Push onto stack                   | \( ( \)      | -                      |
+| \( A \)   | Append to output                  | \( ( \)      | \( A \)                |
+| \( + \)   | Push onto stack                   | \( ( + \)    | \( A \)                |
+| \( B \)   | Append to output                  | \( ( + \)    | \( A B \)              |
+| \( ) \)   | Pop stack to output until \( ( \) | -            | \( A B + \)            |
+| \( \* \)  | Push onto stack                   | \( \* \)     | \( A B + \)            |
+| \( ( \)   | Push onto stack                   | \( \* ( \)   | \( A B + \)            |
+| \( C \)   | Append to output                  | \( \* ( \)   | \( A B + C \)          |
+| \( - \)   | Push onto stack                   | \( \* ( - \) | \( A B + C \)          |
+| \( D \)   | Append to output                  | \( \* ( - \) | \( A B + C D \)        |
+| \( ) \)   | Pop stack to output until \( ( \) | \( \* \)     | \( A B + C D - \)      |
+| End       | Pop all from stack to output      | -            | \( A B + C D - \* \)   |
+
+### Postfix Expression: \( A B + C D - \* \)
+
+### Explanation:
+
+- **Stack Operations**: Operators and parentheses are pushed onto or popped from the stack based on precedence and associativity rules.
+- **Output List**: Operands (like variables or constants) are directly appended to the output list.
+- **Parentheses Handling**: Left parentheses mark the beginning of sub-expressions, and right parentheses trigger popping from the stack until a matching left parenthesis is found.
+
+By following these steps systematically, you can convert any infix expression to its postfix equivalent using the Shunting Yard algorithm.
+
+# Question 58:
+
+To create an AVL tree from the given sequence of data: 17, 28, 9, 14, 37, 55, 88, 10, 47, we will insert each element into the AVL tree while maintaining balance using rotations when necessary. Here's how the AVL tree is constructed step-by-step:
+
+### Step-by-Step AVL Tree Construction:
+
+1. **Insert 17**:
+
+   - Insert 17 as the root since it's the first element.
+
+   ```
+         17
+   ```
+
+2. **Insert 28**:
+
+   - Insert 28 to the right of 17.
+   - Perform necessary rotations to maintain balance (none needed initially).
+
+   ```
+         17
+          \
+          28
+   ```
+
+3. **Insert 9**:
+
+   - Insert 9 to the left of 17.
+   - Perform rotations to balance the tree (left rotation).
+
+   ```
+         17
+        /  \
+       9    28
+   ```
+
+4. **Insert 14**:
+
+   - Insert 14 to the right of 9.
+   - Perform rotations to balance the tree (none needed initially).
+
+   ```
+         17
+        /  \
+       9    28
+        \
+        14
+   ```
+
+5. **Insert 37**:
+
+   - Insert 37 to the right of 28.
+   - Perform rotations to balance the tree (none needed initially).
+
+   ```
+         17
+        /  \
+       9    28
+        \     \
+        14    37
+   ```
+
+6. **Insert 55**:
+
+   - Insert 55 to the right of 37.
+   - Perform rotations to balance the tree (none needed initially).
+
+   ```
+         17
+        /  \
+       9    28
+        \     \
+        14    37
+                \
+                55
+   ```
+
+7. **Insert 88**:
+
+   - Insert 88 to the right of 55.
+   - Perform rotations to balance the tree (none needed initially).
+
+   ```
+         17
+        /  \
+       9    37
+        \     \
+        14    55
+              \
+              88
+   ```
+
+8. **Insert 10**:
+
+   - Insert 10 to the left of 9.
+   - Perform rotations to balance the tree (right-left rotation).
+
+   ```
+         17
+        /  \
+       10   37
+      /  \   \
+     9    14  55
+           \    \
+           14   88
+   ```
+
+9. **Insert 47**:
+
+   - Insert 47 to the left of 37.
+   - Perform rotations to balance the tree (left rotation).
+
+   ```
+         17
+        /  \
+       10   37
+      /  \   \
+     9    14  55
+         /   /  \
+        14  47  88
+   ```
+
+### Final AVL Tree:
+
+```
+         17
+        /  \
+       10   37
+      /  \   \
+     9    14  55
+         /   /  \
+        14  47  88
+```
+
+This AVL tree maintains the balance property where the height difference between the left and right subtrees (balance factor) is at most ±1 for each node. Rotation operations were performed as needed during the insertion process to ensure this balance.
+
+# Questio 59:
+
+1. **Balanced Height**:
+
+   - AVL trees are self-balancing binary search trees where the height difference between the left and right subtrees (balance factor) of any node is at most ±1.
+   - This balanced height ensures that the worst-case time complexity for operations such as search, insertion, and deletion remains \( O(\log n) \), where \( n \) is the number of nodes.
+
+2. **Improved Performance**:
+
+   - In a regular BST, operations like insertion, deletion, and search can degrade to \( O(n) \) in the worst-case scenario (essentially behaving like a linked list) if the tree becomes unbalanced.
+   - AVL trees maintain balance through rotations, ensuring that these operations remain efficient even with dynamic datasets.
+
+3. **Predictable Operations**:
+
+   - AVL trees guarantee \( O(\log n) \) time complexity for all basic operations due to their balanced nature.
+   - This predictability is crucial in real-time systems and applications where performance is critical and the dataset size can vary significantly.
+
+4. **Optimal for Dynamic Datasets**:
+
+   - AVL trees are optimal for scenarios where datasets are dynamically changing (insertions and deletions occur frequently).
+   - They automatically adjust and rebalance themselves, ensuring that the tree remains efficient and balanced at all times.
+
+5. **Applications in Database Systems**:
+   - AVL trees are widely used in database systems and in-memory data structures where rapid access and modification are essential.
+   - Their balanced nature ensures that operations like range queries, updates, and indexing operations are performed efficiently.
+
+# Question 60:
+
+1. **Efficient In-order Traversal**:
+
+   - In a regular Binary Tree, performing an in-order traversal requires recursive calls or a stack to manage traversal state, which consumes additional memory and time.
+   - In a Threaded Binary Tree, threads (additional pointers) are used to link nodes to their successors in in-order traversal order.
+   - This threaded linking allows for direct traversal from one node to its successor without needing to use the call stack or recursion, making in-order traversal iterative and more memory-efficient.
+
+2. **Reduced Time Complexity for Traversal**:
+
+   - Traversal operations (in-order, pre-order, post-order) in a Threaded Binary Tree can be performed in \( O(n) \) time complexity, where \( n \) is the number of nodes.
+   - This efficiency contrasts with \( O(n) \) time complexity in regular Binary Trees when using recursion or iterative methods that require additional space.
+
+3. **Simplifies Implementation**:
+
+   - Implementing threaded pointers in a Threaded Binary Tree simplifies traversal algorithms and reduces the code complexity compared to using stack-based or recursive approaches in regular Binary Trees.
+   - It also reduces the chance of stack overflow errors that may occur in very deep or unbalanced Binary Trees during traversal.
+
+4. **Space Efficiency**:
+
+   - Threaded Binary Trees can save memory that would otherwise be used for managing traversal state (like using a stack or recursion in regular Binary Trees).
+   - This space efficiency is particularly beneficial in memory-constrained environments or embedded systems where every byte of memory counts.
+
+5. **Supports Efficient Searching and Operations**:
+   - Threaded Binary Trees allow for faster search operations and updates after a search because of the efficient traversal capabilities.
+   - Once a node is found through search, subsequent operations (like deletion or modification) can be performed more quickly using threaded links.
