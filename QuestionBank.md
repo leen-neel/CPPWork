@@ -847,8 +847,6 @@ Repition of [Question 39](#question-39)
 - Call the `convertToWords` function with the input amount.
 - Print the result.
 
-This updated code handles numbers up to billions and converts them to words accordingly.
-
 # Question 52:
 
 | **Symbol** | **Stack** | **Postfix Expression** |
