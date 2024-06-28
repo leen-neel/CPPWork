@@ -517,7 +517,7 @@ void bubbleSort(int arr[], int n) {
 
 # Question 36:
 
-[Sorting](https://github.com/leen-neel/CPPWork/blob/master/DSA/Sorting.cpp)
+[Binary Search](https://github.com/leen-neel/CPPWork/blob/master/DSA/BinarySearch.cpp)
 
 # Question 37:
 
