@@ -6,7 +6,6 @@ void bubbleSort(int arr[], int n)
     for (int i = 0; i < n - 1; i++)
     {
         // flag to check if the array is already sorted
-        int flag = 0;
         for (int j = 0; j < n - i - 1; j++)
         {
             if (arr[j] > arr[j + 1])

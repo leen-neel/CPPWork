@@ -42,8 +42,38 @@ public:
         tail = tail->next;
     }
 
+    void prepend(int data)
+    {
+        Node *newHead = new Node(data);
+        newHead->next = head;
+        head = newHead;
+    }
+
+    // remove last element
+    void deleteEnd()
+    {
+
+        if (head == tail)
+        {
+            delete head;
+            head = nullptr;
+            tail = nullptr;
+            return;
+        }
+
+        Node *secondLast = head;
+
+        while (secondLast->next->next != nullptr)
+        {
+            secondLast = secondLast->next;
+        }
+
+        tail = secondLast;
+        secondLast->next = nullptr;
+    }
+
     // remove from beginning
-    void remove()
+    void removeFirst()
     {
         if (head)
         {
@@ -72,7 +102,7 @@ int main()
     list.append(10);
     list.append(15);
 
-    list.remove();
+    list.deleteEnd();
 
     list.display();
     return 0;

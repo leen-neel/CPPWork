@@ -14,17 +14,16 @@ void saddlePoint(int matrix[3][3], int rows, int cols)
 
         for (int j = 0; j < cols; j++)
         {
-
-            if (matrix[i][j] < matrix[i][minIndex])
+            if (matrix[i][j] < matrix[j][minIndex])
             {
                 minIndex = j;
             }
         }
 
         bool isSaddlePoint = true;
-        for (int k = 0; k < rows; k++)
+        for (int j = 0; j < cols; j++)
         {
-            if (matrix[k][minIndex] > matrix[i][minIndex])
+            if (matrix[j][minIndex] > matrix[i][minIndex])
             {
                 isSaddlePoint = false;
                 break;
@@ -33,7 +32,7 @@ void saddlePoint(int matrix[3][3], int rows, int cols)
 
         if (isSaddlePoint)
         {
-            cout << "Saddle is " << matrix[i][minIndex] << endl;
+            cout << "Saddle point is " << matrix[i][minIndex] << endl;
             return;
         }
     }
